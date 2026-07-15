@@ -6,15 +6,11 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: https://kubernetes.github.io/ingress-nginx   # Официальный Helm repo
-    chart: ingress-nginx
-    targetRevision: "4.12.0"   # актуальная версия
+    repoURL: https://github.com/AbaProgrammm/ArgoCD.AI.Abdulla.git   # твой репозиторий
+    targetRevision: main
+    path: argocd/infrastructure/ingress-nginx
     helm:
       releaseName: ingress-nginx
-      values: |-
-        controller:
-          service:
-            type: LoadBalancer
   destination:
     server: https://kubernetes.default.svc
     namespace: ingress-nginx
