@@ -1,7 +1,0 @@
-argocd-infrastructure/
-├── .gitlab-ci.yml
-└── argocd/
-    ├── namespace.yaml
-    ├── kustomization.yaml
-    ├── argocd-cmd-params-cm-patch.yaml
-    └── ingress.yaml
