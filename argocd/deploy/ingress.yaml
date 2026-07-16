@@ -1,0 +1,19 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: abdulla-app
+
+spec:
+  ingressClassName: nginx
+
+  rules:
+    - host: abdulla-app.local
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: abdulla-app
+                port:
+                  name: http
